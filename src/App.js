@@ -9,7 +9,7 @@ import Contact from './sections/Contact';
 
 const App = () => {
   useEffect(() => {
-    document.title = `Portfolio | Emman Enrgeso`;
+    document.title = `Portfolio | Emmanuel Enrgeso`;
   }, []);
 
   return (
