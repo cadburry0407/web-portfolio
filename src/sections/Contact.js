@@ -58,7 +58,6 @@ const Contact = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setSuccess(true);
         setIsLoading(false);
       })

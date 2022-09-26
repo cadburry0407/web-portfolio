@@ -43,7 +43,7 @@ const TechStack = () => {
             <h6
               onClick={() => setSkills(Skills)}
               style={
-                skills.length === 17 ? { color: '#ff7a18' } : { color: '#fff' }
+                skills.length === 18 ? { color: '#ff7a18' } : { color: '#fff' }
               }
             >
               All
