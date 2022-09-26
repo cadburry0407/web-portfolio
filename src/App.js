@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
 
-function App() {
+import Navigation from './sections/Navigation';
+import Main from './sections/Main';
+import Services from './sections/Services';
+import TechStack from './sections/TechStack';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
+
+const App = () => {
+  useEffect(() => {
+    document.title = `Portfolio | Emman Enrgeso`;
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navigation />
+      <Main />
+      <Services />
+      <TechStack />
+      <Projects />
+      <Contact />
+    </>
   );
-}
+};
 
 export default App;

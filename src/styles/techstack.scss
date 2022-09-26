@@ -1,0 +1,73 @@
+@use '../mixin.scss' as mixin;
+
+.skills {
+  width: 70%;
+  padding: 5rem 0 5rem 0;
+
+  @include mixin.bp-large {
+    width: 100%;
+    padding: 5rem 3rem 5rem 3rem;
+    margin-top: 5rem;
+  }
+
+  .breadcrumbs {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    h6 {
+      font-size: 2rem;
+      color: mixin.$color-primary-light-1;
+      text-decoration: none;
+      transition: all 0.2s ease-out;
+      cursor: pointer;
+    }
+
+    h6:hover,
+    h6:focus {
+      color: mixin.$color-primary-light-2;
+    }
+  }
+
+  .skills-icon {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    column-gap: 2rem;
+    row-gap: 4rem;
+
+    padding: 5rem 0 0 0;
+
+    @include mixin.bp-small {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .icon {
+      text-align: center;
+      transition: all 0.2s ease-out;
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+    }
+
+    .icon:hover {
+      scale: 120%;
+      .svgs {
+        fill: mixin.$color-primary-light-2;
+      }
+      p {
+        color: mixin.$color-primary-light-2;
+      }
+    }
+
+    .svgs {
+      width: 5rem;
+      height: 5rem;
+      fill: mixin.$color-primary-light-1;
+    }
+  }
+}

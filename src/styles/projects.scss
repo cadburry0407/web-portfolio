@@ -1,0 +1,107 @@
+@use '../mixin.scss' as mixin;
+
+.projects {
+  width: 70%;
+  padding: 10rem 0 5rem 0;
+
+  @include mixin.bp-large {
+    width: 100%;
+    padding: 5rem 3rem 5rem 3rem;
+    margin-top: 5rem;
+  }
+
+  .cards-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+
+      overflow: hidden;
+      border: 0.1rem solid mixin.$color-primary-light-1;
+      border-radius: 0.8rem;
+      padding-bottom: 1rem;
+
+      h5 {
+        width: 80%;
+        background-color: mixin.$color-primary-light-2;
+        font-size: 1.8rem;
+        color: #000;
+        padding: 1rem 0 1rem 0;
+        text-align: center;
+        position: relative;
+        top: -2rem;
+      }
+
+      .img-item {
+        display: block;
+        height: 17rem;
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+      }
+
+      &-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0.75rem 0 0.75rem;
+
+        flex-grow: 1;
+
+        p {
+          font-size: 1.4rem;
+          color: mixin.$color-primary-light-1;
+          text-align: center;
+        }
+
+        .credits {
+          font-size: 1.4rem;
+          color: mixin.$color-primary-light-2;
+          text-align: center;
+          margin: 1rem 0 1rem 0;
+          text-decoration: none;
+        }
+
+        .tech {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          column-gap: 0.5rem;
+          flex-wrap: wrap;
+          row-gap: 0.5rem;
+
+          p::after {
+            content: '|';
+            color: mixin.$color-primary-light-2;
+            margin-left: 0.3rem;
+          }
+
+          p:last-child::after {
+            content: '';
+          }
+        }
+
+        .project-btn {
+          padding-top: 3rem;
+          margin-top: auto;
+          display: flex;
+          flex-direction: column;
+          row-gap: 1rem;
+          width: 100%;
+
+          .btn {
+            width: 100%;
+          }
+
+          .btn-reverse {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use '../mixin.scss' as mixin;
+
+.services {
+  width: 70%;
+  padding: 5rem 0 5rem 0;
+
+  @include mixin.bp-large {
+    width: 100%;
+    padding: 0 3rem 0 3rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    .card-item {
+      border: 0.14rem solid mixin.$color-primary-light-2;
+      border-radius: 0.8rem;
+      padding: 3rem;
+
+      .svgs {
+        width: 6rem;
+        height: 6rem;
+        display: block;
+        margin: auto;
+        fill: mixin.$color-primary-light-2;
+      }
+    }
+
+    .card-item > * {
+      margin-bottom: 2rem;
+    }
+  }
+}

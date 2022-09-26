@@ -1,0 +1,79 @@
+@use './mixin.scss' as mixin;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #1e1f26;
+  color: aliceblue;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.heading-h1 {
+  font-size: 2.5rem;
+  color: mixin.$color-primary-light-2;
+}
+
+.heading-main {
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  // width: 10rem;
+  background-color: mixin.$color-primary-light-2;
+  border: 0.2rem solid transparent;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #1e1f26;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  // margin-right: 2rem;
+  transition: all 0.1s ease-out;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-reverse {
+  // width: 10rem;
+  border: 0.2rem solid mixin.$color-primary-light-2;
+  background-color: aliceblue;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: mixin.$color-primary-light-2;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-right: 2rem;
+  transition: all 0.2s ease-out;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include mixin.bp-small {
+    margin-right: 0;
+  }
+}
